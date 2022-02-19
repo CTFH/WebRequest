@@ -14,7 +14,7 @@ public class HttpController : MonoBehaviour
         string url = "https://joytas.net/php/hello.php";
         //Unity2018~
         UnityWebRequest uwr = UnityWebRequest.Get(url);
-        //Unity WebRequest クラスのインスタンスuwr
+        //Unity WebRequest クラスのインスタンスをuwrに代入
         //　.Getでインスタンスを作成出来る
         yield return uwr.SendWebRequest();//実際に通信しているメソッド
         //yield return 一回処理して終わったら下に行く
