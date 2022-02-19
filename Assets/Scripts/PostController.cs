@@ -23,6 +23,7 @@ public class PostController : MonoBehaviour
 
         string url = "https://joytas.net/php/calc.php";
         UnityWebRequest uwr = UnityWebRequest.Post(url, form);
+        //インスタンス作成
         yield return uwr.SendWebRequest();
         if(uwr.isHttpError || uwr.isNetworkError)
         {
@@ -30,6 +31,9 @@ public class PostController : MonoBehaviour
         }
         else
         {
+            //通信した結果をかきこむ
+            //通信した結果をdownloadHandker.textが持っている
+            //それをresult.textに代入
             Debug.Log(uwr.downloadHandler.text);
         }
     }
